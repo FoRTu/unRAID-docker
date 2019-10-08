@@ -7,19 +7,19 @@
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>true</Privileged>
-  </Support>
+  <Support/>
   <Project/>
   <Overview>&#xD;
     Telegraf client that subscribe to MQTT data.&#xD;
-  </Overview>
+  <Overview/>
   <Category>Tools:</Category>
   <WebUI/>
   <TemplateURL>https://raw.githubusercontent.com/FoRTu/unRAID-docker/master/telegraf-mqtt.xml</TemplateURL>
-  <Icon>https://github.com/FoRTu/unRAID-docker/master/icons/telegraf.png</Icon>
+  <Icon>https://raw.githubusercontent.com/FoRTu/unRAID-docker/master/icons/telegraf.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  </DateInstalled>
+  <DateInstalled/>
   <DonateText/>
   <DonateLink/>
   <Description>&#xD;
