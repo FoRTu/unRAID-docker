@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>StorageNodeV3</Name>
+  <Repository>storjlabs/storagenode:alpha</Repository>
+  <Registry>https://hub.docker.com/r/storjlabs/storagenode/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://documentation.storj.io/</Support>
+  <Project>https://storj.io/</Project>
+  <Overview>Have unused hard drive capacity and bandwidth?&#xD;
+&#xD;
+Storj pays you for your unused hard drive capacity and bandwidth in STORJ tokens! Join the waitlist: https://storj.io/sign-up-farmer </Overview>
+  <Category>Cloud:</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://storj.io///press-kit/Storj-symbol.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1570548785</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Have unused hard drive capacity and bandwidth?&#xD;
+&#xD;
+Storj pays you for your unused hard drive capacity and bandwidth in STORJ tokens! Join the waitlist: https://storj.io/sign-up-farmer </Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>28967</HostPort>
+        <ContainerPort>28967</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/StorageNode/Identity/</HostDir>
+      <ContainerDir>/app/identity</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/StorageNode/Storage/</HostDir>
+      <ContainerDir>/app/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Labels/>
+  <Config Name="Identity directory" Target="/app/identity" Default="" Mode="rw" Description="The location of your identity files." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/StorageNode/Identity/</Config>
+  <Config Name="storage-dir" Target="/app/config" Default="" Mode="rw" Description="Directory where you want files to be stored on your hard drive." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/StorageNode/Storage/</Config>
+  <Config Name="WALLET" Target="WALLET" Default="0x99999999999999999999999999999999999999" Mode="" Description="Ethereum address for payments" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="EMAIL" Target="EMAIL" Default="user@example.com" Mode="" Description="Mail address so that we can notify you when a new version has been released (optional)" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="ADDRESS" Target="ADDRESS" Default="my.domain.net:28967" Mode="" Description="external IP address or the DDNS you configured and the port you opened on your router &amp;lt;ip&amp;gt;:&amp;lt;port&amp;gt;" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="BANDWIDTH" Target="BANDWIDTH" Default="500GB" Mode="" Description="How much bandwidth you want to allocate to the Storj network" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="STORAGE" Target="STORAGE" Default="500GB" Mode="" Description="How much disk space you want to allocate to the Storj network" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Port" Target="28967" Default="28967" Mode="tcp" Description="TCP/IP port for input an output comunication." Type="Port" Display="always" Required="true" Mask="false">28967</Config>
+</Container>
