@@ -3,15 +3,13 @@
   <Name>Telegraf-MQTT</Name>
   <Repository>telegraf:alpine</Repository>
   <Registry>https://hub.docker.com/_/telegraf/</Registry>
-  <Network>host</Network>
+  <Network>bridge</Network>
   <MyIP/>
   <Shell>sh</Shell>
-  <Privileged>true</Privileged>
+  <Privileged>false</Privileged>
   <Support/>
   <Project/>
-  <Overview>&#xD;
-    Telegraf client that subscribe to MQTT data.&#xD;
-  <Overview/>
+  <Overview>Telegraf client that subscribe to MQTT data.</Overview>
   <Category>Tools:</Category>
   <WebUI/>
   <TemplateURL>https://raw.githubusercontent.com/FoRTu/unRAID-docker/master/telegraf-mqtt</TemplateURL>
@@ -19,14 +17,12 @@
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled/>
+  <DateInstalled>1570542224</DateInstalled>
   <DonateText/>
   <DonateLink/>
-  <Description>&#xD;
-    Telegraf client that subscribe to MQTT data.&#xD;
-  </Description>
+  <Description>Telegraf client that subscribe to MQTT data.</Description>
   <Networking>
-    <Mode>host</Mode>
+    <Mode>bridge</Mode>
     <Publish/>
   </Networking>
   <Data>
@@ -38,5 +34,5 @@
   </Data>
   <Environment/>
   <Labels/>
-  <Config Name="Configure file" Target="/etc/telegraf/telegraf.conf" Default="/mnt/user/appdata/telegraf-mqtt/telegraf.conf" Mode="rw" Description="Container Path: /etc/telegraf/telegraf.conf" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/telegraf-mqtt/telegraf.conf</Config>
+  <Config Name="Full path of the configure file" Target="/etc/telegraf/telegraf.conf" Default="/mnt/user/appdata/telegraf-mqtt/telegraf.conf" Mode="rw" Description="Container Path: /etc/telegraf/telegraf.conf" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/telegraf-mqtt/telegraf.conf</Config>
 </Container>
