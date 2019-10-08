@@ -13,7 +13,7 @@
   <Category>Tools:</Category>
   <WebUI/>
   <TemplateURL>https://raw.githubusercontent.com/FoRTu/unRAID-docker/master/telegraf-mqtt</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/FoRTu/unRAID-docker/master/icons/telegraf.png</Icon>
+  <Icon>https://raw.githubusercontent.com/FoRTu/unRAID-docker/master/icons/telegraf-mqtt.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>

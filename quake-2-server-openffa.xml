@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Quake2-OpenFFA</Name>
+  <Repository>fortu/quake2-openffa</Repository>
+  <Registry>https://hub.docker.com/r/fortu/quake2-openffa/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/fortu/quake2-openffa/</Support>
+  <Project/>
+  <Overview>Dockerized version of Quake 2 dedicated server with the OpenFFA mod   Converted By Community Applications   Always verify this template (and values) against the dockerhub support page for the container</Overview>
+  <Category>GameServers:</Category>
+  <WebUI>http://q2servers.com/</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/FoRTu/unRAID-docker/master/icons/quake-2-server-openffa.png</Icon>
+  <ExtraParams>-p 27910:27910/tcp -p 27910:27910/udp</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1570549633</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Dockerized version of Quake 2 dedicated server with the OpenFFA mod   Converted By Community Applications   Always verify this template (and values) against the dockerhub support page for the container</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish/>
+  </Networking>
+  <Data/>
+  <Environment>
+    <Variable>
+      <Value>My Q2 Server</Value>
+      <Name>Q2_HOSTNAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>10</Value>
+      <Name>Q2_MAXCLIENTS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>admin</Value>
+      <Name>Q2_ADMIN</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>AdminPassw0rd</Value>
+      <Name>Q2_ADMIN_PASSWORD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>Rc0nPassw0rd</Value>
+      <Name>Q2_RCON_PASSWD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>admin@example.com</Value>
+      <Name>Q2_ADMIN_EMAIL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>https://example.com</Value>
+      <Name>Q2_ADMIN_WEBPAGE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>[=======================]\n\nQuake 2 OpenFFA Server\n(Testing)\n\nType 'menu' on console\n\n[=======================]</Value>
+      <Name>Q2_MOTD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>29</Value>
+      <Name>Q2_TIMELIMIT</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>23</Value>
+      <Name>Q2_FRAGLIMIT</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>60</Value>
+      <Name>Q2_IDLETIME</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Q2_HOSTNAME" Target="Q2_HOSTNAME" Default="" Mode="" Description="Quake 2 Hostname: Q2_HOSTNAME" Type="Variable" Display="always" Required="false" Mask="false">My Q2 Server</Config>
+  <Config Name="Q2_MAXCLIENTS" Target="Q2_MAXCLIENTS" Default="" Mode="" Description="Maximun players: Q2_MAXCLIENTS" Type="Variable" Display="always" Required="false" Mask="false">10</Config>
+  <Config Name="Q2_ADMIN" Target="Q2_ADMIN" Default="" Mode="" Description="Administrator username: Q2_ADMIN" Type="Variable" Display="always" Required="false" Mask="false">admin</Config>
+  <Config Name="Q2_ADMIN_PASSWORD" Target="Q2_ADMIN_PASSWORD" Default="" Mode="" Description="Administrator password: Q2_ADMIN_PASSWORD" Type="Variable" Display="always" Required="false" Mask="false">AdminPassw0rd</Config>
+  <Config Name="Q2_RCON_PASSWD" Target="Q2_RCON_PASSWD" Default="" Mode="" Description="RCON password: Q2_RCON_PASSWD" Type="Variable" Display="always" Required="false" Mask="false">Rc0nPassw0rd</Config>
+  <Config Name="Q2_ADMIN_EMAIL" Target="Q2_ADMIN_EMAIL" Default="" Mode="" Description="Administrator email: Q2_ADMIN_EMAIL" Type="Variable" Display="always" Required="false" Mask="false">admin@example.com</Config>
+  <Config Name="Q2_ADMIN_WEBPAGE" Target="Q2_ADMIN_WEBPAGE" Default="" Mode="" Description="Website: Q2_ADMIN_WEBPAGE" Type="Variable" Display="always" Required="false" Mask="false">https://example.com</Config>
+  <Config Name="Q2_MOTD" Target="Q2_MOTD" Default="" Mode="" Description="MOTD text: Q2_MOTD" Type="Variable" Display="always" Required="false" Mask="false">[=======================]\n\nQuake 2 OpenFFA Server\n(Testing)\n\nType 'menu' on console\n\n[=======================]</Config>
+  <Config Name="Q2_TIMELIMIT" Target="Q2_TIMELIMIT" Default="" Mode="" Description="Match time limit: Q2_TIMELIMIT" Type="Variable" Display="always" Required="false" Mask="false">29</Config>
+  <Config Name="Q2_FRAGLIMIT" Target="Q2_FRAGLIMIT" Default="" Mode="" Description="Frag limit: Q2_FRAGLIMIT" Type="Variable" Display="always" Required="false" Mask="false">23</Config>
+  <Config Name="Q2_IDLETIME" Target="Q2_IDLETIME" Default="" Mode="" Description="Auto kick Idle time: Q2_IDLETIME" Type="Variable" Display="always" Required="false" Mask="false">60</Config>
+</Container>
