@@ -14,16 +14,27 @@
   <WebUI>http://q2servers.com/</WebUI>
   <TemplateURL/>
   <Icon>https://raw.githubusercontent.com/FoRTu/unRAID-docker/master/icons/quake-2-server-openffa.png</Icon>
-  <ExtraParams>-p 27910:27910/tcp -p 27910:27910/udp</ExtraParams>
+  <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1570549633</DateInstalled>
+  <DateInstalled>1570551102</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Description>Dockerized version of Quake 2 dedicated server with the OpenFFA mod   Converted By Community Applications   Always verify this template (and values) against the dockerhub support page for the container</Description>
   <Networking>
     <Mode>bridge</Mode>
-    <Publish/>
+    <Publish>
+      <Port>
+        <HostPort>27910</HostPort>
+        <ContainerPort>27910</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>27910</HostPort>
+        <ContainerPort>27910</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+    </Publish>
   </Networking>
   <Data/>
   <Environment>
@@ -95,4 +106,6 @@
   <Config Name="Q2_TIMELIMIT" Target="Q2_TIMELIMIT" Default="" Mode="" Description="Match time limit: Q2_TIMELIMIT" Type="Variable" Display="always" Required="false" Mask="false">29</Config>
   <Config Name="Q2_FRAGLIMIT" Target="Q2_FRAGLIMIT" Default="" Mode="" Description="Frag limit: Q2_FRAGLIMIT" Type="Variable" Display="always" Required="false" Mask="false">23</Config>
   <Config Name="Q2_IDLETIME" Target="Q2_IDLETIME" Default="" Mode="" Description="Auto kick Idle time: Q2_IDLETIME" Type="Variable" Display="always" Required="false" Mask="false">60</Config>
+  <Config Name="TCP Port" Target="27910" Default="27910" Mode="tcp" Description="The TCP port." Type="Port" Display="always" Required="false" Mask="false">27910</Config>
+  <Config Name="UDP Port" Target="27910" Default="27910" Mode="udp" Description="The UDP port." Type="Port" Display="always" Required="true" Mask="false">27910</Config>
 </Container>
