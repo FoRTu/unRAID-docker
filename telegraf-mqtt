@@ -14,7 +14,7 @@
   <Overview/>
   <Category>Tools:</Category>
   <WebUI/>
-  <TemplateURL>https://raw.githubusercontent.com/FoRTu/unRAID-docker/master/telegraf-mqtt.xml</TemplateURL>
+  <TemplateURL>https://raw.githubusercontent.com/FoRTu/unRAID-docker/master/telegraf-mqtt</TemplateURL>
   <Icon>https://raw.githubusercontent.com/FoRTu/unRAID-docker/master/icons/telegraf.png</Icon>
   <ExtraParams/>
   <PostArgs/>
