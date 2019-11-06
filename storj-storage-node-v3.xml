@@ -56,4 +56,5 @@ Storj pays you for your unused hard drive capacity and bandwidth in STORJ tokens
   <Config Name="BANDWIDTH" Target="BANDWIDTH" Default="500GB" Mode="" Description="How much bandwidth you want to allocate to the Storj network" Type="Variable" Display="always" Required="true" Mask="false"></Config>
   <Config Name="STORAGE" Target="STORAGE" Default="500GB" Mode="" Description="How much disk space you want to allocate to the Storj network" Type="Variable" Display="always" Required="true" Mask="false"></Config>
   <Config Name="Port" Target="28967" Default="28967" Mode="tcp" Description="TCP/IP port for input an output comunication." Type="Port" Display="always" Required="true" Mask="false">28967</Config>
+  <Config Name="Dashboard Port" Target="14002" Default="14002" Mode="tcp" Description="Web access to the dashboard" Type="Port" Display="always" Required="true" Mask="false">14002</Config>
 </Container>
