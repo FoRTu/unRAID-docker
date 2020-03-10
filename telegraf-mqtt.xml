@@ -12,7 +12,7 @@
   <Overview>Telegraf client that subscribe to MQTT data.</Overview>
   <Category>Tools:</Category>
   <WebUI/>
-  <TemplateURL>https://raw.githubusercontent.com/FoRTu/unRAID-docker/master/telegraf-mqtt</TemplateURL>
+  <TemplateURL/>
   <Icon>https://raw.githubusercontent.com/FoRTu/unRAID-docker/master/icons/telegraf-mqtt.png</Icon>
   <ExtraParams/>
   <PostArgs/>

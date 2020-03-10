@@ -13,7 +13,7 @@
   <Category>Other: Network:VPN Network:Other Status:Stable</Category>
   <WebUI/>
   <TemplateURL/>
-  <Icon>https://raw.githubusercontent.com/FoRTu/docker-tor-relay/master/tor-relay.png</Icon>
+  <Icon>https://raw.githubusercontent.com/FoRTu/unRAID-docker/master/icons/tor-relay.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
