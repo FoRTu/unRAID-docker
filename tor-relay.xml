@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Tor-Relay</Name>
+  <Repository>fortu/tor-relay</Repository>
+  <Registry>https://hub.docker.com/r/fortu/tor-relay/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/FoRTu/docker-tor-relay</Support>
+  <Project/>
+  <Overview>Create your own Tor Relay node and contribute to the Tor Network. You only need a torrc configuration file to start running this relay. You can find a fully functional template in https://github.com/FoRTu/docker-tor-relay/blob/master/torrc . Just download and edit some lines to personalize it as you want.</Overview>
+  <Category>Other: Network:VPN Network:Other Status:Stable</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/FoRTu/docker-tor-relay/master/tor-relay.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1583864451</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Create your own Tor Relay node and contribute to the Tor Network. You only need a torrc configuration file to start running this relay. You can find a fully functional template in https://github.com/FoRTu/docker-tor-relay/blob/master/torrc . Just download and edit some lines to personalize it as you want.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>9001</HostPort>
+        <ContainerPort>9001</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>9030</HostPort>
+        <ContainerPort>9030</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>9050</HostPort>
+        <ContainerPort>9050</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/tor-relay/</HostDir>
+      <ContainerDir>/etc/tor/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="ORPort" Target="9001" Default="9001" Mode="tcp" Description="Define the ORPort: 9001" Type="Port" Display="always" Required="true" Mask="false">9001</Config>
+  <Config Name="DirPort" Target="9030" Default="9030" Mode="tcp" Description="Define DirPort: 9030" Type="Port" Display="always" Required="true" Mask="false">9030</Config>
+  <Config Name="SocksPort" Target="9050" Default="9050" Mode="tcp" Description="Define SocksPort: 9050" Type="Port" Display="always" Required="true" Mask="false">9050</Config>
+  <Config Name="Configuration path" Target="/etc/tor/" Default="/mnt/user/appdata/tor-relay/" Mode="rw" Description="The path where you have to put the configuration file " Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/tor-relay/</Config>
+</Container>
