@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>opentracker</Name>
+  <Repository>fortu/opentracker</Repository>
+  <Registry>https://hub.docker.com/r/fortu/opentracker/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/fortu/opentracker/</Support>
+  <Project>https://github.com/FoRTu/docker-opentracker</Project>
+  <Overview>Opentracker is a open and free bittorrent tracker. It aims for minimal resource usage and is intended to run at any GNU/Linux system. Currently it is deployed as an open and free tracker instance. First of all, this tracker is compiled to use a hash whitelist, so only hashes stored on whitelist.txt are going to be served.</Overview>
+  <Category>Other: Network:Other Status:Stable</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/FoRTu/unRAID-docker/master/icons/opentracker.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1585513073</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Opentracker is a open and free bittorrent tracker. It aims for minimal resource usage and is intended to run at any GNU/Linux system. Currently it is deployed as an open and free tracker instance. First of all, this tracker is compiled to use a hash whitelist, so only hashes stored on whitelist.txt are going to be served.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>6969</HostPort>
+        <ContainerPort>6969</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/opentracker</HostDir>
+      <ContainerDir>/etc/opentracker</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="Listen Port" Target="6969" Default="6969" Mode="udp" Description="The default listen port: 6969" Type="Port" Display="always" Required="true" Mask="false">6969</Config>
+  <Config Name="Configuration path" Target="/etc/opentracker" Default="/mnt/user/appdata/opentracker" Mode="rw" Description="The path where you have to put the configuration files (opentracker.conf &amp;amp; whitelist.txt)" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/opentracker</Config>
+</Container>

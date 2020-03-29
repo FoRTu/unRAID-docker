@@ -15,7 +15,7 @@ Storj pays you for your unused hard drive capacity and bandwidth in STORJ tokens
   <Category>Cloud:</Category>
   <WebUI/>
   <TemplateURL/>
-  <Icon>https://storj.io///press-kit/Storj-symbol.png</Icon>
+  <Icon>https://raw.githubusercontent.com/FoRTu/unRAID-docker/master/icons/storj.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
