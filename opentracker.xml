@@ -17,7 +17,7 @@
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1585513073</DateInstalled>
+  <DateInstalled>1585515061</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Description>Opentracker is a open and free bittorrent tracker. It aims for minimal resource usage and is intended to run at any GNU/Linux system. Currently it is deployed as an open and free tracker instance. First of all, this tracker is compiled to use a hash whitelist, so only hashes stored on whitelist.txt are going to be served.</Description>
@@ -28,6 +28,11 @@
         <HostPort>6969</HostPort>
         <ContainerPort>6969</ContainerPort>
         <Protocol>udp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>6969</HostPort>
+        <ContainerPort>6969</ContainerPort>
+        <Protocol>tcp</Protocol>
       </Port>
     </Publish>
   </Networking>
@@ -41,5 +46,6 @@
   <Environment/>
   <Labels/>
   <Config Name="Listen Port" Target="6969" Default="6969" Mode="udp" Description="The default listen port: 6969" Type="Port" Display="always" Required="true" Mask="false">6969</Config>
+  <Config Name="Listen port (TCP)" Target="6969" Default="6969" Mode="tcp" Description="The default listen port (tcp): 6969" Type="Port" Display="always" Required="true" Mask="false">6969</Config>
   <Config Name="Configuration path" Target="/etc/opentracker" Default="/mnt/user/appdata/opentracker" Mode="rw" Description="The path where you have to put the configuration files (opentracker.conf &amp;amp; whitelist.txt)" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/opentracker</Config>
 </Container>
