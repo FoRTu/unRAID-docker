@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Grafana-Renderer</Name>
+  <Repository>grafana/grafana-image-renderer</Repository>
+  <Registry>https://hub.docker.com/r/grafana/grafana-image-renderer</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/grafana/grafana-image-renderer/issues</Support>
+  <Project>https://github.com/grafana/grafana-image-renderer/blob/master/docs/remote_rendering_using_docker.md#prometheus-metrics-endpoint-output-example</Project>
+  <Overview>Instead of installing and running the image renderer as a plugin of Grafana, with this Docker container you can run it as a remote image rendering service. </Overview>
+  <Category>Network:Management Tools:</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/FoRTu/unRAID-docker/master/icons/grafana-renderer.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1589996180</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Instead of installing and running the image renderer as a plugin of Grafana, with this Docker container you can run it as a remote image rendering service. </Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8081</HostPort>
+        <ContainerPort>8081</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data/>
+  <Environment/>
+  <Labels/>
+  <Config Name="Port" Target="8081" Default="8081" Mode="tcp" Description="Container Port: 8081" Type="Port" Display="always" Required="true" Mask="false">8081</Config>
+</Container>
