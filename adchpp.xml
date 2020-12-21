@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>ADCHpp</Name>
+  <Repository>fortu/adchpp</Repository>
+  <Registry>https://hub.docker.com/r/fortu/adchpp</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/FoRTu/docker-adchpp</Support>
+  <Project>https://adchpp.sourceforge.io/</Project>
+  <Overview>ADCH++ is a hub software for the ADC network. It implements the ADC protocol. The core application is very simple, but extensible using plugins. Among the standard plugins there is a scripting plugin that allows hub owners to further customize the hub using several scripting languages including Lua. The core is also exposed as a Python module, thus it is possible to use it within a Python application. Look at the container logs to get administrator username and password.</Overview>
+  <Category>Other: Network:Other Status:Stable</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/FoRTu/unRAID-docker/master/icons/adchpp.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1608539365</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>ADCH++ is a hub software for the ADC network. It implements the ADC protocol. The core application is very simple, but extensible using plugins. Among the standard plugins there is a scripting plugin that allows hub owners to further customize the hub using several scripting languages including Lua. The core is also exposed as a Python module, thus it is possible to use it within a Python application. Look at the container logs to get administrator username and password.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>4884</HostPort>
+        <ContainerPort>2780</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/adchpp</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="Configuration" Target="/data" Default="/mnt/user/appdata/adchpp" Mode="rw" Description="All configuration will bi stored on this folder." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/adchpp</Config>
+  <Config Name="TCP/IP port" Target="2780" Default="2780" Mode="tcp" Description="The TCP/IP port where " Type="Port" Display="always" Required="true" Mask="false">2780</Config>
+</Container>

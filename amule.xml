@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>aMule</Name>
+  <Repository>fortu/amule</Repository>
+  <Registry>https://hub.docker.com/r/fortu/amule</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/fortu/opentracker/</Support>
+  <Project>https://github.com/FoRTu/docker-amule</Project>
+  <Overview>aMule is a free peer-to-peer file sharing utility that works with the EDonkey network and the Kad network, offering similar features to eMule and adding others such as GeoIP (country flags).</Overview>
+  <Category>Downloaders: Network:Other Status:Stable</Category>
+  <WebUI>http://[IP]:[PORT:4711]/</WebUI>
+  <TemplateURL/>
+  <Icon>https://github.com/FoRTu/unRAID-docker/raw/master/icons/amule.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1608539514</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>aMule is a free peer-to-peer file sharing utility that works with the EDonkey network and the Kad network, offering similar features to eMule and adding others such as GeoIP (country flags).</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>4662</HostPort>
+        <ContainerPort>4662</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>4672</HostPort>
+        <ContainerPort>4672</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>4711</HostPort>
+        <ContainerPort>4711</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/amule</HostDir>
+      <ContainerDir>/home/amule/.aMule/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/Downloads/eMule/</HostDir>
+      <ContainerDir>/Incoming</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/Downloads/eMule/TEMP/</HostDir>
+      <ContainerDir>/Temp</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>123456</Value>
+      <Name>WEBUI_PWD</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="TCP Port" Target="4662" Default="4662" Mode="tcp" Description="Default TCP port: 4662" Type="Port" Display="always" Required="true" Mask="false">4662</Config>
+  <Config Name="UDP Port" Target="4672" Default="4672" Mode="udp" Description="Default UDP port: 4672" Type="Port" Display="always" Required="true" Mask="false">4672</Config>
+  <Config Name="WebGUI Port" Target="4711" Default="4711" Mode="tcp" Description="WebGUI default port: 4711" Type="Port" Display="always" Required="true" Mask="false">4711</Config>
+  <Config Name="WebGUI Password" Target="WEBUI_PWD" Default="aMule_Passw0rd" Mode="" Description="The password to login on WebGUI." Type="Variable" Display="always" Required="true" Mask="false">aMule_Passw0rd</Config>
+  <Config Name="Configuration path" Target="/home/amule/.aMule/" Default="/mnt/user/appdata/oamule" Mode="rw" Description="The path where the configuration files will be stored." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/amule</Config>
+  <Config Name="Downloaded Files" Target="/Incoming" Default="/mnt/user/Downloads/aMule/" Mode="rw" Description="The folder where downloaded files will be stored." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/Downloads/aMule/</Config>
+  <Config Name="Temp Files" Target="/Temp" Default="/mnt/user/Downloads/aMule/Temp/" Mode="rw" Description="The folder where temp filles will be stored." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/Downloads/aMule/Temp/</Config>
+</Container>
