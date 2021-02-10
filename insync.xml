@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Insync</Name>
+  <Repository>tiredofit/debian:latest</Repository>
+  <Registry>https://hub.docker.com/r/tiredofit/insync</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://www.insynchq.com/</Project>
+  <Overview>Insync is a Google Drive client to syncronice the all of part of the content of you files in the cloud. Yu can sync and manage Google Drive files for multiple accounts and automatically convert files to Microsoft Office or OpenDocument.</Overview>
+  <Category>Backup: Cloud:</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/FoRTu/unRAID-docker/master/icons/insync.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1612989756</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Insync is a Google Drive client to syncronice the all of part of the content of you files in the cloud. Yu can sync and manage Google Drive files for multiple accounts and automatically convert files to Microsoft Office or OpenDocument.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish/>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/Insync</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>xxxxxx@gmail.com</Value>
+      <Name>INSYNC1_USERNAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>*****************</Value>
+      <Name>INSYNC1_AUTH_CODE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>open-document</Value>
+      <Name>INSYNC_DOWNLOAD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>false</Value>
+      <Name>ENABLE_ZABBIX</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>false</Value>
+      <Name>ENABLE_SMTP</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="INSYNC1_USERNAME" Target="INSYNC1_USERNAME" Default="" Mode="" Description="Your Gmail account." Type="Variable" Display="always" Required="true" Mask="false">xxxxxx@gmail.com</Config>
+  <Config Name="INSYNC1_AUTH_CODE" Target="INSYNC1_AUTH_CODE" Default="" Mode="" Description="Visit https://insynchq.com/auth to authorize Insync for your Google Drive Account" Type="Variable" Display="always" Required="true" Mask="true">*****************</Config>
+  <Config Name="INSYNC_DOWNLOAD" Target="INSYNC_DOWNLOAD" Default="open-document" Mode="" Description="How to download files link (.gdoc), ms-office (.docx), open-document (.odt)" Type="Variable" Display="always" Required="true" Mask="false">open-document</Config>
+  <Config Name="ENABLE_ZABBIX" Target="ENABLE_ZABBIX" Default="false" Mode="" Description="Enable or disable ZABBIX agent" Type="Variable" Display="always" Required="true" Mask="false">false</Config>
+  <Config Name="ENABLE_SMTP" Target="ENABLE_SMTP" Default="false" Mode="" Description="Enable or disable SMTP service" Type="Variable" Display="always" Required="true" Mask="false">false</Config>
+  <Config Name="Files" Target="/data" Default="/mnt/user/insyng" Mode="rw" Description="Where do you want to sync all the files." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/Insync</Config>
+</Container>
