@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>PS2smb</Name>
+  <Repository>fortu/ps2smb</Repository>
+  <Registry>https://hub.docker.com/r/fortu/ps2smb</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://github.com/FoRTu/docker-ps2smb</Project>
+  <Overview>With this container you can share over the network your PlayStation 2 games stored on your PC or NAS to be opened by OPL (OpenPS2Loader) can open them.&#xD;
+&#xD;
+You will find the Samba configuration file "smb.conf" in the github repository of this image (https://github.com/FoRTu/docker-ps2smb/blob/main/smb.conf)</Overview>
+  <Category>GameServers: MediaServer:Other Network:Other Status:Stable</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/FoRTu/unRAID-docker/master/icons/ps2smb.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1624190169</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>With this container you can share over the network your PlayStation 2 games stored on your PC or NAS to be opened by OPL (OpenPS2Loader) can open them.&#xD;
+&#xD;
+You will find the Samba configuration file "smb.conf" in the github repository of this image (https://github.com/FoRTu/docker-ps2smb/blob/main/smb.conf)</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish/>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/ps2smb/smb.conf</HostDir>
+      <ContainerDir>/etc/samba/smb.conf</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="Samba Configure file" Target="/etc/samba/smb.conf" Default="/mnt/user/appdata/ps2smb/smb.conf" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/ps2smb/smb.conf</Config>
+</Container>
